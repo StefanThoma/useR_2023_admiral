@@ -1,0 +1,140 @@
+---
+title: "Cross Industry Package Development"
+subtitle: "A Newcomer's Perspective"
+author: Stefan Thoma
+format: 
+  revealjs: default
+---
+
+# (Who am I)
+joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then. 
+
+# Problem to be solved
+
+
+
+Need for end-to-end solution in R. 
+Part of that is a package for data standards - transformation from sdtm to adam.
+
+We didn't like in SAS: 
+- each company develops their own custom solutions
+- Even if a new hire is SAS proficient, company solutions need to be learned again
+- Very specific solutions for specific problems, not modular
+
+
+Every company has essentially the same requirements for this task. 
+
+
+# Proposed solution
+
+-  Admiral!
+
+- Not a Roche product! (Not sure where this fits best)
+
+# Challenges at startup
+
+-  Convince higher ups & peers
+    - Real problem needs to be solved
+
+-  Convince other companies?
+
+Thomas Neitmann Roche & Marco Rimmler GSK
+
+one team from the start
+
+# Strategies
+
+-  Act quickly: 
+    - Open source early
+    - Communicate early
+    - Get many companies involved
+    - Focus on developing for general use
+    
+    
+-  Community involvement
+    - Users help development
+    - Can give feedback, create issues
+    - Can join devs 
+
+-  One `core` package +
+    -  package for therapeutic area 
+    -  internal company package
+    
+-  Consistent interface and design across all packages
+    - Ensured via developers guide and CICD
+    - Overlap of developers between packages
+
+-  Modularity + templates for common / most more complex tasks
+
+-  License is jointly owned
+    - Admiral won't stop if one company exits
+    - Monetisation of code not possible
+    - Responsibility for maintanance
+        - Package is never "done"
+        
+
+# Impact 
+## For Roche
+-  10 Devs for the price of 2
+-  Seat at the table
+-  No total dev control
+
+
+## Attractive workplace
+-  Use of R attracts talent
+-  Open source development means transparency and more ethical 
+-  Less hierarchies in dev team (different companies)
+-  Autonomous work - everyone can chose which issues they want to work
+-  Expanding network across companies
+-  Knowledge is more easily transferable to other positions
+
+
+# Conclusion
+
+Message: Benefits of developing open source packages across companies
+
+Particularly attractive for new hires
+
+
+# Notes
+
+Talk with Ross Farruiga
+
+Collaboration: 
+anyone could have done it separately -> many different packages eventually open sourced
+___ start early to collaborate together! 
+companies coming up to be listed as contributors, what do they need to do? 
+makes comapnies more attractive
+
+
+
+-> removes hierarchies: resources 50 50 with gsk: collaboration agreement
+anyone can walk away any time. But everything done has to be open source
+communicated already from the start, even though repo was private. 
+after 6 months people test it from many different companies. 20 companies w/ 50 programmers - ~500 comments
+
+roche and gsk own admiral core license
+
+license means you need to maintain the package
+
+do i talk about how roche wants to be distant from pharmaverse? 
+
+challenge to have adjacent packages stay close to the core package
+
+admiral dev defines package development strategies -> keeps packages close
+
+how do we keep consistent with bigger pharmaverse? 
+
+gordon is also in ophta admiral
+
+people in core also check out and consult in the adjacent packages
+
+core also makes reviews before release.
+
+users will be used to admiral. will call out problems in any packages and make issues
+
+
+
+
+
+
