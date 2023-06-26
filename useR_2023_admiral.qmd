@@ -8,42 +8,55 @@ format:
 
 # (Who am I)
 joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then. 
+::: {.notes}
+Speaker notes go here.
+:::
 
 # Problem to be solved
-
-
 
 Need for end-to-end solution in R. 
 Part of that is a package for data standards - transformation from sdtm to adam.
 
 We didn't like in SAS: 
-- each company develops their own custom solutions
-- Even if a new hire is SAS proficient, company solutions need to be learned again
+- Each company buys their own custom solutions form vendors
+- Even if a new hire is SAS proficient they need to learn company specific workflow and 
 - Very specific solutions for specific problems, not modular
 
 
 Every company has essentially the same requirements for this task. 
-
+::: {.notes}
+Speaker notes go here.
+:::
 
 # Proposed solution
 
--  Admiral!
+- Admiral!
 
-- Not a Roche product! (Not sure where this fits best)
+- Not a Roche product! (Not sure where this fits best, maybe strategy)
+
+::: {.notes}
+talk two sentences what admiral does, and that its modular, etc. 
+:::
 
 # Challenges at startup
 
 -  Convince higher ups & peers
-    - Real problem needs to be solved
+    - Real problem needs to be solved, whats in it for the company? 
+    - Already have some work done, e.g. partners or something solid
+    - Aks for forgiveness, not for permission
 
--  Convince other companies?
+-  Convince other companies
 
-Thomas Neitmann Roche & Marco Rimmler GSK
 
 one team from the start
+::: {.notes}
+
+Tell story from Thomas Neitmann Roche & Marco Rimmler GSK
+
+:::
 
 # Strategies
-
+## Approach
 -  Act quickly: 
     - Open source early
     - Communicate early
@@ -55,7 +68,12 @@ one team from the start
     - Users help development
     - Can give feedback, create issues
     - Can join devs 
+    
+::: {.notes}
+Speaker notes go here.
+:::
 
+## Design
 -  One `core` package +
     -  package for therapeutic area 
     -  internal company package
@@ -71,7 +89,10 @@ one team from the start
     - Monetisation of code not possible
     - Responsibility for maintanance
         - Package is never "done"
-        
+
+::: {.notes}
+Speaker notes go here.
+:::
 
 # Impact 
 ## For Roche
@@ -79,7 +100,9 @@ one team from the start
 -  Seat at the table
 -  No total dev control
 
-
+::: {.notes}
+Speaker notes go here.
+:::
 ## Attractive workplace
 -  Use of R attracts talent
 -  Open source development means transparency and more ethical 
@@ -88,17 +111,22 @@ one team from the start
 -  Expanding network across companies
 -  Knowledge is more easily transferable to other positions
 
+::: {.notes}
+Surprised to learn that Roche is *investing* into open source projects 
+:::
 
 # Conclusion
 
 Message: Benefits of developing open source packages across companies
 
 Particularly attractive for new hires
-
+::: {.notes}
+Speaker notes go here.
+:::
 
 # Notes
-
-Talk with Ross Farruiga
+(These are just notes I took when meeting Ross)
+Talk with Ross Farrugia
 
 Collaboration: 
 anyone could have done it separately -> many different packages eventually open sourced
