@@ -25,7 +25,7 @@ We didn't like in SAS:
 
 Every company has essentially the same requirements for this task. 
 ::: {.notes}
-Speaker notes go here.
+
 :::
 
 # Proposed solution
@@ -47,11 +47,17 @@ talk two sentences what admiral does, and that its modular, etc.
 
 -  Convince other companies
 
+-  Convince regulators
 
-one team from the start
+
+
 ::: {.notes}
 
 Tell story from Thomas Neitmann Roche & Marco Rimmler GSK
+one team from the start
+
+
+
 
 :::
 
@@ -74,9 +80,9 @@ Speaker notes go here.
 :::
 
 ## Design
--  One `core` package +
-    -  package for therapeutic area 
-    -  internal company package
+-  One `core` package 
+    -  + package for therapeutic area 
+    -  + internal company package
     
 -  Consistent interface and design across all packages
     - Ensured via developers guide and CICD
@@ -91,7 +97,10 @@ Speaker notes go here.
         - Package is never "done"
 
 ::: {.notes}
-Speaker notes go here.
+
+
+Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.
+
 :::
 
 # Impact 
