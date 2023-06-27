@@ -7,9 +7,9 @@ format:
 ---
 
 # (Who am I)
-joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then. 
+
 ::: {.notes}
-Speaker notes go here.
+joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then. 
 :::
 
 # Problem to be solved
@@ -24,42 +24,113 @@ We didn't like in SAS:
 
 
 Every company has essentially the same requirements for this task. 
+
 ::: {.notes}
+So, why did we want to change from SAS to R?
+- people were not happy with the computing environment
+- there are many different computing environments for different use cases
+- in SAS, solutions are tailored to companies, so every company has their own solution
+This is especially wasteful as most companies are basically doing the same thing. 
+
+In that spirit, there are two aspects to this: 
+First, we are switching to an overarching language agnostic computing environment
+And we are developing at the moment within the open source programming language R.
+We aim to have an end-to-end clinical data analysis pipeline in R
+
+And second, the decision to collaborate with other companies to develop the solutions
 
 :::
 
 # Proposed solution
 
-- Admiral!
+- Admiral
 
 - Not a Roche product! (Not sure where this fits best, maybe strategy)
 
 ::: {.notes}
 talk two sentences what admiral does, and that its modular, etc. 
+
+Emphasize that we do not see admiral as a 
 :::
 
-# Challenges at startup
 
--  Convince higher ups & peers
+## Challenges at startup
+
+-  Convince the company
     - Real problem needs to be solved, whats in it for the company? 
     - Already have some work done, e.g. partners or something solid
-    - Aks for forgiveness, not for permission
-
--  Convince other companies
+    - Ask for forgiveness, not for permission
 
 -  Convince regulators
+
+-  Convince other companies
 
 
 
 ::: {.notes}
 
+One of the first products that was open source from the beginning. 
+
+A lot of convincing was needed! 
+To get a project properly started there needs to be approval from the higher ups. 
+I have talked to several people involved and can reiterate what they told me: 
+Most importantly, you have to able to explain whats in it for the company.
+
+I believe this is a clear case: Roche is not a software development company, we develop drugs. 
+We do not gain any competitive advantage by protecting our trial analysis software. 
+Up to now, we paid a lot of money to buy SAS licenses and to have software developed for us. 
+We want to work in R, why not share the developers cost?
+
+And that is not the only advantage: 
+You will want to use that code for submissions too, otherwise why write it. 
+It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry. 
+
+So what needed to be done: convince your peers! 
+
+
+
+
+
+
 Tell story from Thomas Neitmann Roche & Marco Rimmler GSK
 one team from the start
 
 
-
+changes DS position from simply creating scripts one tiem to creating reusable software. 
+Changes the ADS position to a more effective and more rewarding work, because there will be less repetition and more focus on writing better and reusable code.
 
 :::
+
+# Impact 
+## For Roche
+-  10 Devs for the price of 2
+-  Seat at the table - shape the product
+-  No total development control
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## Attractive workplace
+-  Use of R attracts talent
+-  same language for stats and statistical programmers
+-  Open source development means transparency and more ethical 
+-  Less hierarchies in dev team (different companies)
+-  Autonomous work - everyone can chose which issues they want to work
+-  Expanding network across companies
+-  Knowledge is more easily transferable to other positions
+-  Leadership  opportunities outside of Corporation
+-  Harder to get recognition, no manager present
+
+::: {.notes}
+Surprised to learn that Roche is *investing* into open source projects 
+
+
+
+Recognition: That's why I have to make such a presentation... (joke)
+:::
+
+
 
 # Strategies
 ## Approach
@@ -103,37 +174,20 @@ Joint license means stability. Stability is needed if we want the industry to tr
 
 :::
 
-# Impact 
-## For Roche
--  10 Devs for the price of 2
--  Seat at the table
--  No total dev control
-
-::: {.notes}
-Speaker notes go here.
-:::
-## Attractive workplace
--  Use of R attracts talent
--  Open source development means transparency and more ethical 
--  Less hierarchies in dev team (different companies)
--  Autonomous work - everyone can chose which issues they want to work
--  Expanding network across companies
--  Knowledge is more easily transferable to other positions
-
-::: {.notes}
-Surprised to learn that Roche is *investing* into open source projects 
-:::
-
 # Conclusion
 
 Message: Benefits of developing open source packages across companies
 
 Particularly attractive for new hires
+
 ::: {.notes}
-Speaker notes go here.
+This slide is not finished yet
 :::
 
-# Notes
+# (ignore this slide) meeting notes
+
+::: {.notes}
+
 (These are just notes I took when meeting Ross)
 Talk with Ross Farrugia
 
@@ -175,3 +229,4 @@ users will be used to admiral. will call out problems in any packages and make i
 
 
 
+:::

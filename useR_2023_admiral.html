@@ -339,57 +339,198 @@ Stefan Thoma
 </section>
 <section id="who-am-i" class="title-slide slide level1 center">
 <h1>(Who am I)</h1>
+<aside class="notes">
 <p>joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section id="problem-to-be-solved" class="title-slide slide level1 center">
 <h1>Problem to be solved</h1>
 <p>Need for end-to-end solution in R. Part of that is a package for data standards - transformation from sdtm to adam.</p>
-<p>We didn’t like in SAS: - each company develops their own custom solutions - Even if a new hire is SAS proficient, company solutions need to be learned again - Very specific solutions for specific problems, not modular</p>
+<p>We didn’t like in SAS: - Each company buys their own custom solutions form vendors - Even if a new hire is SAS proficient they need to learn company specific workflow and - Very specific solutions for specific problems, not modular</p>
 <p>Every company has essentially the same requirements for this task.</p>
+<aside class="notes">
+<p>So, why did we want to change from SAS to R? - people were not happy with the computing environment - there are many different computing environments for different use cases - in SAS, solutions are tailored to companies, so every company has their own solution This is especially wasteful as most companies are basically doing the same thing.</p>
+<p>In that spirit, there are two aspects to this: First, we are switching to an overarching language agnostic computing environment And we are developing at the moment within the open source programming language R. We aim to have an end-to-end clinical data analysis pipeline in R</p>
+<p>And second, the decision to collaborate with other companies to develop the solutions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
+<section>
 <section id="proposed-solution" class="title-slide slide level1 center">
 <h1>Proposed solution</h1>
 <ul>
-<li><p>Admiral!</p></li>
-<li><p>Not a Roche product! (Not sure where this fits best)</p></li>
+<li><p>Admiral</p></li>
+<li><p>Not a Roche product! (Not sure where this fits best, maybe strategy)</p></li>
 </ul>
+<aside class="notes">
+<p>talk two sentences what admiral does, and that its modular, etc.</p>
+<p>Emphasize that we do not see admiral as a</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-
-<section id="challenges-at-startup" class="title-slide slide level1 center">
-<h1>Challenges at startup</h1>
+<section id="challenges-at-startup" class="slide level2">
+<h2>Challenges at startup</h2>
 <ul>
-<li>Convince higher ups &amp; peers
+<li><p>Convince the company</p>
 <ul>
-<li>Real problem needs to be solved</li>
+<li>Real problem needs to be solved, whats in it for the company?</li>
+<li>Already have some work done, e.g.&nbsp;partners or something solid</li>
+<li>Ask for forgiveness, not for permission</li>
 </ul></li>
-<li>Convince other companies?</li>
+<li><p>Convince regulators</p></li>
+<li><p>Convince other companies</p></li>
 </ul>
-<p>Thomas Neitmann Roche &amp; Marco Rimmler GSK</p>
-<p>one team from the start</p>
-</section>
+<aside class="notes">
+<p>One of the first products that was open source from the beginning.</p>
+<p>A lot of convincing was needed! To get a project properly started there needs to be approval from the higher ups. I have talked to several people involved and can reiterate what they told me: Most importantly, you have to able to explain whats in it for the company.</p>
+<p>I believe this is a clear case: Roche is not a software development company, we develop drugs. We do not gain any competitive advantage by protecting our trial analysis software. Up to now, we paid a lot of money to buy SAS licenses and to have software developed for us. We want to work in R, why not share the developers cost?</p>
+<p>And that is not the only advantage: You will want to use that code for submissions too, otherwise why write it. It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry.</p>
+<p>So what needed to be done: convince your peers!</p>
+<p>Tell story from Thomas Neitmann Roche &amp; Marco Rimmler GSK one team from the start</p>
+<p>changes DS position from simply creating scripts one tiem to creating reusable software. Changes the ADS position to a more effective and more rewarding work, because there will be less repetition and more focus on writing better and reusable code.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="impact" class="title-slide slide level1 center">
+<h1>Impact</h1>
 
+</section>
+<section id="for-roche" class="slide level2">
+<h2>For Roche</h2>
+<ul>
+<li>10 Devs for the price of 2</li>
+<li>Seat at the table - shape the product</li>
+<li>No total development control</li>
+</ul>
+<aside class="notes">
+<p>Speaker notes go here.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="attractive-workplace" class="slide level2">
+<h2>Attractive workplace</h2>
+<ul>
+<li>Use of R attracts talent</li>
+<li>same language for stats and statistical programmers</li>
+<li>Open source development means transparency and more ethical</li>
+<li>Less hierarchies in dev team (different companies)</li>
+<li>Autonomous work - everyone can chose which issues they want to work</li>
+<li>Expanding network across companies</li>
+<li>Knowledge is more easily transferable to other positions</li>
+<li>Leadership opportunities outside of Corporation</li>
+<li>Harder to get recognition, no manager present</li>
+</ul>
+<aside class="notes">
+<p>Surprised to learn that Roche is <em>investing</em> into open source projects</p>
+<p>Recognition: That’s why I have to make such a presentation… (joke)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
 <section id="strategies" class="title-slide slide level1 center">
 <h1>Strategies</h1>
+
+</section>
+<section id="approach" class="slide level2">
+<h2>Approach</h2>
 <ul>
-<li><p>Act quickly:</p>
+<li>Act quickly:
 <ul>
 <li>Open source early</li>
 <li>Communicate early</li>
 <li>Get many companies involved</li>
 <li>Focus on developing for general use</li>
 </ul></li>
-<li><p>Community involvement</p>
+<li>Community involvement
 <ul>
 <li>Users help development</li>
 <li>Can give feedback, create issues</li>
 <li>Can join devs</li>
 </ul></li>
-<li><p>One <code>core</code> package +</p>
+</ul>
+<aside class="notes">
+<p>Speaker notes go here.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="design" class="slide level2">
+<h2>Design</h2>
 <ul>
+<li><p>One <code>core</code> package</p>
+<ul>
+<li><ul>
 <li>package for therapeutic area</li>
+</ul></li>
+<li><ul>
 <li>internal company package</li>
+</ul></li>
 </ul></li>
 <li><p>Consistent interface and design across all packages</p>
 <ul>
@@ -407,39 +548,43 @@ Stefan Thoma
 </ul></li>
 </ul></li>
 </ul>
-</section>
-
-<section>
-<section id="impact" class="title-slide slide level1 center">
-<h1>Impact</h1>
-
-</section>
-<section id="for-roche" class="slide level2">
-<h2>For Roche</h2>
-<ul>
-<li>10 Devs for the price of 2</li>
-<li>Seat at the table</li>
-<li>No total dev control</li>
-</ul>
-</section>
-<section id="attractive-workplace" class="slide level2">
-<h2>Attractive workplace</h2>
-<ul>
-<li><p>Use of R attracts talent</p></li>
-<li><p>Open source development means transparency and more ethical</p></li>
-<li><p>Less hierarchies in dev team (different companies)</p></li>
-<li><p>Autonomous work - everyone can chose which issues they want to work</p></li>
-<li><p>Expanding network across companies</p></li>
-<li><p>Knowledge is more easily transferable to other positions</p></li>
-<li></li>
-<li><p>Who owns the license?</p></li>
-</ul>
+<aside class="notes">
+<p>Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="conclusion" class="title-slide slide level1 center">
+<h1>Conclusion</h1>
 <p>Message: Benefits of developing open source packages across companies</p>
 <p>Particularly attractive for new hires</p>
+<aside class="notes">
+<p>This slide is not finished yet</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="notes" class="slide level2">
-<h2>Notes</h2>
-<p>Talk with Ross Farruiga</p>
+
+<section id="ignore-this-slide-meeting-notes" class="title-slide slide level1 center">
+<h1>(ignore this slide) meeting notes</h1>
+<aside class="notes">
+<p>(These are just notes I took when meeting Ross) Talk with Ross Farrugia</p>
 <p>Collaboration: anyone could have done it separately -&gt; many different packages eventually open sourced ___ start early to collaborate together! companies coming up to be listed as contributors, what do they need to do? makes comapnies more attractive</p>
 <p>-&gt; removes hierarchies: resources 50 50 with gsk: collaboration agreement anyone can walk away any time. But everything done has to be open source communicated already from the start, even though repo was private. after 6 months people test it from many different companies. 20 companies w/ 50 programmers - ~500 comments</p>
 <p>roche and gsk own admiral core license</p>
@@ -452,10 +597,21 @@ Stefan Thoma
 <p>people in core also check out and consult in the adjacent packages</p>
 <p>core also makes reviews before release.</p>
 <p>users will be used to admiral. will call out problems in any packages and make issues</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
