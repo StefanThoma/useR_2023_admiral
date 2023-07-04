@@ -1,15 +1,26 @@
 ---
 title: "Cross Industry Package Development"
 subtitle: "A Newcomer's Perspective"
+date: 21/07/2022
 author: Stefan Thoma
-format: 
-  revealjs: default
+title-slide-attributes: 
+  data-background-color: "#F5F5F2"
+format:
+  revealjs: 
+    theme: roche_template/roche.scss
+    logo: roche_template/Roche_Logo_800px_Blue.png
 ---
 
-# (Who am I)
 
 ::: {.notes}
-joined roche in november 2022 as an intern, permanent since april, and working 20% on the admiral team since then. 
+Today, I would like to talk about Cross Industry R package development.
+
+More specifically, I would like to discuss this from my personal perspective as a newcomer. 
+
+So let me introduce myself quickly: 
+I have a background in Psychology and Statistics, and joined Roche as an intern last September. 
+This April I joined Roche permanently as an Analytical Data Scientist, AKA a statistical programmer.  
+
 :::
 
 # Problem to be solved
@@ -43,7 +54,7 @@ And second, the decision to collaborate with other companies to develop the solu
 
 # Proposed solution
 
-- Admiral
+![admiral](admiral.png)
 
 - Not a Roche product! (Not sure where this fits best, maybe strategy)
 
@@ -183,6 +194,11 @@ Particularly attractive for new hires
 ::: {.notes}
 This slide is not finished yet
 :::
+
+
+# {.last-slide }
+
+Doing now what patients need next
 
 # (ignore this slide) meeting notes
 

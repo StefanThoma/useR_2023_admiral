@@ -1,0 +1,126 @@
+/*-- scss:defaults --*/
+
+// colors
+
+$color-grey1: #544F4F;
+$color-grey2: #706B69;
+$color-grey3: #C2BAB5;
+$color-grey4: #DBD6D1;
+$color-grey5: #F5F5F2;
+
+$color-neutral1: #FAC9B5;
+$color-neutral2: #FAD6C7;
+$color-neutral3: #FFE8DE;
+$color-neutral4: #FFF7F5;
+
+$color-rocheblue: #0B41CD;
+$color-darkblue: #022366;
+$color-lightblue: #1482FA;
+$color-extralightblue: #BDE3FF;
+
+
+// fonts
+@font-face {
+  font-family: 'RocheSans';
+  src: url('/roche_template/RocheSans/RocheSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RocheSans';
+  src: url('/roche_template/RocheSans/RocheSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RocheSans';
+  src: url('/roche_template/RocheSans/RocheSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RocheSans';
+  src: url('/roche_template/RocheSans/RocheSans-Bolditalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RocheSansLight';
+  src: url('/roche_template/RocheSans/RocheSansLight-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RocheSansLight';
+  src: url('/roche_template/RocheSans/RocheSansLight-Lightitalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RocheSansLight';
+  src: url('/roche_template/RocheSans/RocheSansLight-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RocheSansLight';
+  src: url('/roche_template/RocheSans/RocheSansLight-Mediumitalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+$font-family-sans-serif: "RocheSans", sans-serif;
+
+$title-bg: $color-grey5 !important;
+// colors
+$body-bg: #ffffff !default;
+$body-color: #000 !default;
+$link-color: $color-lightblue !default;
+$selection-bg: $color-grey1 !default;
+
+// headings
+$presentation-heading-font:  "RocheSans";//,// "Palatino Linotype", // "Book Antiqua", Palatino,
+  //FreeSerif, serif !default;
+$presentation-heading-color: #383d3d !default;
+
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+
+
+body {
+  font-family: 'RocheSansLight', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  bottom: unset !important;
+  right: unset !important;
+  top: 4%;
+  right: 4% !important;
+  height: 5% !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.last-slide {
+  text-align: center;
+  color: $color-rocheblue; /* Specify the specific color you want */
+
+}
