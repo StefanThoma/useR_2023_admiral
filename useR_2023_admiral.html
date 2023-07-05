@@ -388,6 +388,11 @@ Stefan Thoma
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/thomas7/Git/useR_2023_admiral"</code></pre>
+</div>
+</div>
 </section>
 
 <section>
@@ -396,12 +401,11 @@ Stefan Thoma
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><img data-src="admiral.png"></p>
-</div><ul>
-<li>End-to-end solution under Pharmaverse</li>
-<li>Admiral covers the transformation from SDTM to ADaM</li>
-</ul><div class="column" style="width:60%;">
+</div><div class="column" style="width:60%;">
 <ul>
-<li>Not a Roche product</li>
+<li><p>End-to-end solution under Pharmaverse</p></li>
+<li><p>Admiral covers the transformation from SDTM to ADaM</p></li>
+<li><p>Not a Roche product</p></li>
 </ul>
 </div>
 </div>
@@ -457,7 +461,7 @@ Stefan Thoma
 <h1>Impact</h1>
 
 </section>
-<section id="for-roche" class="slide level2 scrollable">
+<section id="for-roche" class="slide level2">
 <h2>For Roche</h2>
 <div>
 <ul>
@@ -480,8 +484,8 @@ Stefan Thoma
           display:block!important;
       }</style></aside>
 </section>
-<section id="attractive-workplace" class="slide level2">
-<h2>Attractive workplace</h2>
+<section id="workplace" class="slide level2">
+<h2>Workplace</h2>
 <div>
 <ul>
 <li class="fragment">Use of R attracts talent</li>
@@ -491,7 +495,7 @@ Stefan Thoma
 <li class="fragment">Autonomous work - everyone can chose which issues they want to work</li>
 <li class="fragment">Expanding network across companies</li>
 <li class="fragment">Knowledge is more easily transferable to other positions</li>
-<li class="fragment">Leadership opportunities outside of Corporation</li>
+<li class="fragment">Leadership opportunities outside of corporation</li>
 <li class="fragment">Harder to get recognition, no manager present</li>
 </ul>
 </div>
@@ -871,6 +875,44 @@ Stefan Thoma
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
