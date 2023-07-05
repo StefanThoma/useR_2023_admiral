@@ -23,27 +23,31 @@ This April I joined Roche permanently as an Analytical Data Scientist, AKA a sta
 
 :::
 
-# Problem to be solved
+# Context
 
-Need for end-to-end solution in R. 
-Part of that is a package for data standards - transformation from sdtm to adam.
-
-We didn't like in SAS: 
-- Each company buys their own custom solutions form vendors
-- Even if a new hire is SAS proficient they need to learn company specific workflow and 
-- Very specific solutions for specific problems, not modular
+-   Shift from SAS to R
+  -   End-to-end solution is required
+  
+-   Cross-company development
 
 
-Every company has essentially the same requirements for this task. 
 
 ::: {.notes}
-So, why did we want to change from SAS to R?
-- people were not happy with the computing environment
-- there are many different computing environments for different use cases
-- in SAS, solutions are tailored to companies, so every company has their own solution
-This is especially wasteful as most companies are basically doing the same thing. 
+<!-- We didn't like in SAS:  -->
+<!-- - Each company buys their own custom solutions form vendors -->
+<!-- - Even if a new hire is SAS proficient they need to learn company specific workflow and  -->
+<!-- - Very specific solutions for specific problems, not modular -->
+<!-- So, why did we want to change from SAS to R? -->
+<!-- - people were not happy with the computing environment -->
+<!-- - there are many different computing environments for different use cases -->
+<!-- - in SAS, solutions are tailored to companies, so every company has their own solution -->
+<!-- This is especially wasteful as most companies are basically doing the same thing.  -->
 
-In that spirit, there are two aspects to this: 
+<!-- In that spirit, there are two aspects to this:  -->
+
+
+
+
 First, we are switching to an overarching language agnostic computing environment
 And we are developing at the moment within the open source programming language R.
 We aim to have an end-to-end clinical data analysis pipeline in R
@@ -52,11 +56,32 @@ And second, the decision to collaborate with other companies to develop the solu
 
 :::
 
-# Proposed solution
+```{r}
+getwd()
+```
 
-![admiral](admiral.png)
 
-- Not a Roche product! (Not sure where this fits best, maybe strategy)
+# Project
+
+::::{.columns}
+
+:::{.column width="40%"}
+
+![](admiral.png)
+
+:::
+
+:::{.column width="60%"}
+-   End-to-end solution under Pharmaverse
+-   Admiral covers the transformation from SDTM to ADaM
+
+
+-   Not a Roche product
+
+:::
+
+
+::::
 
 ::: {.notes}
 talk two sentences what admiral does, and that its modular, etc. 
@@ -114,15 +139,17 @@ Changes the ADS position to a more effective and more rewarding work, because th
 
 # Impact 
 ## For Roche
+::: {.incremental}
 -  10 Devs for the price of 2
 -  Seat at the table - shape the product
 -  No total development control
-
+:::
 ::: {.notes}
 Speaker notes go here.
 :::
 
-## Attractive workplace
+## Workplace 
+::: {.incremental}
 -  Use of R attracts talent
 -  same language for stats and statistical programmers
 -  Open source development means transparency and more ethical 
@@ -130,11 +157,12 @@ Speaker notes go here.
 -  Autonomous work - everyone can chose which issues they want to work
 -  Expanding network across companies
 -  Knowledge is more easily transferable to other positions
--  Leadership  opportunities outside of Corporation
+-  Leadership  opportunities outside of corporation
 -  Harder to get recognition, no manager present
+:::
 
 ::: {.notes}
-Surprised to learn that Roche is *investing* into open source projects 
+Surprised to learn that Roche is *investing* ito open source projects 
 
 
 
@@ -145,26 +173,42 @@ Recognition: That's why I have to make such a presentation... (joke)
 
 # Strategies
 ## Approach
--  Act quickly: 
-    - Open source early
-    - Communicate early
-    - Get many companies involved
-    - Focus on developing for general use
-    
+::: {.incremental}
+
+-   Act quickly: 
+  -   Communicate early
+  -   Open source early
+    -   Focus on developing for general use
+  -   Get many companies involved
     
 -  Community involvement
     - Users help development
     - Can give feedback, create issues
     - Can join devs 
-    
+:::
 ::: {.notes}
-Speaker notes go here.
+
+The first thing is: Get the message out. 
+You are already working on something? Or know that you will soon? 
+Spread the message at conferences, you may get others involved at an early stage. 
+With other companies involved, you will be less likely to create a package filling a company niche  and more likely to make a package that is more widely applicable. 
+This, in turn, will more likely result in a broader adoption and in more resources of more companies in the medium turn. 
+
+The earlier you start to open source, the less likely other companies have already solved the problem in house. 
+This again increases the likelihood that they may join your project, as there is still room for other companies to have a seat at the table.
+
+I think it is also a very good idea to keep the development team close to the end users. 
+This will ensure that the end product is actually usable at the end. 
+We ensure this by having developers on our team that also work as statistical programmers, plus we try to frequently engage with a broad group of statistical programmers. 
+An example for that was the admiral hackathon last january, where we introduced the admiral workflow to hundreds of statistical programmers. 
+
 :::
 
-## Design
+## Design { .scrollable}
+::: {.incremental}
 -  One `core` package 
-    -  + package for therapeutic area 
-    -  + internal company package
+    -  Plus package for therapeutic area 
+    -  Plus internal company package
     
 -  Consistent interface and design across all packages
     - Ensured via developers guide and CICD
@@ -177,13 +221,43 @@ Speaker notes go here.
     - Monetisation of code not possible
     - Responsibility for maintanance
         - Package is never "done"
-
+:::
 ::: {.notes}
+Now lets outline some of the thoughts that went into the package: 
+
+So first, the admiral package does not stand on its own. 
+It is a core package which includes the most general functionalities. 
+But there are currently x other therapeutic specific packages, 
+namely admiralonco, admiralvaccines, and more. 
+There, another dev team works on therapeutic specific implementations. 
+
+There are also company specific extensions, for example, at roche we have admiralroche which includes company specific functions. 
+This can for example override specific default settings of the more general admiral package or implement common challenges in proprietary data-sets that are not generally an issue. 
+
+However, we try to keep all these packages consistent with each other. 
+That means that all packages follow a certain design philosophy and nomenclature. 
+We try to "enforce" this by having a public developers guide which lays bare the thoughts that went into the design, and how developers can best follow the practice. 
+Commonalities are further ensured by having core package developers involved in the addon packages as well. 
+
 
 
 Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.
 
 :::
+
+
+
+# Development workflow
+
+-   GitHub repository is the centerpiece
+-   Every request / fix / improvement starts as an issue
+-   Weekly stand-up meetings
+  -   Check-in on progress
+  -   Discuss priorities for current release
+    -   Product lead (Roche) & technical lead (GSK)
+  -   Assign issues from the backlog
+  -   Strategy discussions
+
 
 # Conclusion
 
@@ -192,7 +266,7 @@ Message: Benefits of developing open source packages across companies
 Particularly attractive for new hires
 
 ::: {.notes}
-This slide is not finished yet
+
 :::
 
 
