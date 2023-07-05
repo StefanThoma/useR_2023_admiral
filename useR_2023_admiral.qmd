@@ -83,6 +83,7 @@ getwd()
 
 ::::
 
+
 ::: {.notes}
 talk two sentences what admiral does, and that its modular, etc. 
 
@@ -138,15 +139,21 @@ Changes the ADS position to a more effective and more rewarding work, because th
 :::
 
 # Impact 
+
 ## For Roche
+
 ::: {.incremental}
+
 -  10 Devs for the price of 2
 -  Seat at the table - shape the product
 -  No total development control
+
 :::
+
 ::: {.notes}
 Speaker notes go here.
 :::
+
 
 ## Workplace 
 ::: {.incremental}
@@ -160,6 +167,7 @@ Speaker notes go here.
 -  Leadership  opportunities outside of corporation
 -  Harder to get recognition, no manager present
 :::
+
 
 ::: {.notes}
 Surprised to learn that Roche is *investing* ito open source projects 
