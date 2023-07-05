@@ -357,14 +357,25 @@ Stefan Thoma
           display:block!important;
       }</style></aside>
 </section>
-<section id="problem-to-be-solved" class="title-slide slide level1 center">
-<h1>Problem to be solved</h1>
-<p>Need for end-to-end solution in R. Part of that is a package for data standards - transformation from sdtm to adam.</p>
-<p>We didn’t like in SAS: - Each company buys their own custom solutions form vendors - Even if a new hire is SAS proficient they need to learn company specific workflow and - Very specific solutions for specific problems, not modular</p>
-<p>Every company has essentially the same requirements for this task.</p>
+<section id="context" class="title-slide slide level1 center">
+<h1>Context</h1>
+<ul>
+<li><p>Shift from SAS to R</p></li>
+<li><p>End-to-end solution is required</p></li>
+<li><p>Cross-company development</p></li>
+</ul>
 <aside class="notes">
-<p>So, why did we want to change from SAS to R? - people were not happy with the computing environment - there are many different computing environments for different use cases - in SAS, solutions are tailored to companies, so every company has their own solution This is especially wasteful as most companies are basically doing the same thing.</p>
-<p>In that spirit, there are two aspects to this: First, we are switching to an overarching language agnostic computing environment And we are developing at the moment within the open source programming language R. We aim to have an end-to-end clinical data analysis pipeline in R</p>
+<!-- We didn't like in SAS:  -->
+<!-- - Each company buys their own custom solutions form vendors -->
+<!-- - Even if a new hire is SAS proficient they need to learn company specific workflow and  -->
+<!-- - Very specific solutions for specific problems, not modular -->
+<!-- So, why did we want to change from SAS to R? -->
+<!-- - people were not happy with the computing environment -->
+<!-- - there are many different computing environments for different use cases -->
+<!-- - in SAS, solutions are tailored to companies, so every company has their own solution -->
+<!-- This is especially wasteful as most companies are basically doing the same thing.  -->
+<!-- In that spirit, there are two aspects to this:  -->
+<p>First, we are switching to an overarching language agnostic computing environment And we are developing at the moment within the open source programming language R. We aim to have an end-to-end clinical data analysis pipeline in R</p>
 <p>And second, the decision to collaborate with other companies to develop the solutions</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -380,12 +391,20 @@ Stefan Thoma
 </section>
 
 <section>
-<section id="proposed-solution" class="title-slide slide level1 center">
-<h1>Proposed solution</h1>
-
-<img data-src="admiral.png" class="r-stretch quarto-figure-center"><p class="caption">admiral</p><ul>
-<li>Not a Roche product! (Not sure where this fits best, maybe strategy)</li>
+<section id="project" class="title-slide slide level1 center">
+<h1>Project</h1>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="admiral.png"></p>
+</div><ul>
+<li>End-to-end solution under Pharmaverse</li>
+<li>Admiral covers the transformation from SDTM to ADaM</li>
+</ul><div class="column" style="width:60%;">
+<ul>
+<li>Not a Roche product</li>
 </ul>
+</div>
+</div>
 <aside class="notes">
 <p>talk two sentences what admiral does, and that its modular, etc.</p>
 <p>Emphasize that we do not see admiral as a</p>
@@ -438,13 +457,15 @@ Stefan Thoma
 <h1>Impact</h1>
 
 </section>
-<section id="for-roche" class="slide level2">
+<section id="for-roche" class="slide level2 scrollable">
 <h2>For Roche</h2>
+<div>
 <ul>
-<li>10 Devs for the price of 2</li>
-<li>Seat at the table - shape the product</li>
-<li>No total development control</li>
+<li class="fragment">10 Devs for the price of 2</li>
+<li class="fragment">Seat at the table - shape the product</li>
+<li class="fragment">No total development control</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Speaker notes go here.</p>
 <style type="text/css">
@@ -461,19 +482,21 @@ Stefan Thoma
 </section>
 <section id="attractive-workplace" class="slide level2">
 <h2>Attractive workplace</h2>
+<div>
 <ul>
-<li>Use of R attracts talent</li>
-<li>same language for stats and statistical programmers</li>
-<li>Open source development means transparency and more ethical</li>
-<li>Less hierarchies in dev team (different companies)</li>
-<li>Autonomous work - everyone can chose which issues they want to work</li>
-<li>Expanding network across companies</li>
-<li>Knowledge is more easily transferable to other positions</li>
-<li>Leadership opportunities outside of Corporation</li>
-<li>Harder to get recognition, no manager present</li>
+<li class="fragment">Use of R attracts talent</li>
+<li class="fragment">same language for stats and statistical programmers</li>
+<li class="fragment">Open source development means transparency and more ethical</li>
+<li class="fragment">Less hierarchies in dev team (different companies)</li>
+<li class="fragment">Autonomous work - everyone can chose which issues they want to work</li>
+<li class="fragment">Expanding network across companies</li>
+<li class="fragment">Knowledge is more easily transferable to other positions</li>
+<li class="fragment">Leadership opportunities outside of Corporation</li>
+<li class="fragment">Harder to get recognition, no manager present</li>
 </ul>
+</div>
 <aside class="notes">
-<p>Surprised to learn that Roche is <em>investing</em> into open source projects</p>
+<p>Surprised to learn that Roche is <em>investing</em> ito open source projects</p>
 <p>Recognition: That’s why I have to make such a presentation… (joke)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -494,23 +517,24 @@ Stefan Thoma
 </section>
 <section id="approach" class="slide level2">
 <h2>Approach</h2>
+<div>
 <ul>
-<li>Act quickly:
+<li class="fragment"><p>Act quickly:</p></li>
+<li class="fragment"><p>Communicate early</p></li>
+<li class="fragment"><p>Open source early - Focus on developing for general use</p></li>
+<li class="fragment"><p>Get many companies involved</p></li>
+<li class="fragment"><p>Community involvement</p>
 <ul>
-<li>Open source early</li>
-<li>Communicate early</li>
-<li>Get many companies involved</li>
-<li>Focus on developing for general use</li>
-</ul></li>
-<li>Community involvement
-<ul>
-<li>Users help development</li>
-<li>Can give feedback, create issues</li>
-<li>Can join devs</li>
+<li class="fragment">Users help development</li>
+<li class="fragment">Can give feedback, create issues</li>
+<li class="fragment">Can join devs</li>
 </ul></li>
 </ul>
+</div>
 <aside class="notes">
-<p>Speaker notes go here.</p>
+<p>The first thing is: Get the message out. You are already working on something? Or know that you will soon? Spread the message at conferences, you may get others involved at an early stage. With other companies involved, you will be less likely to create a package filling a company niche and more likely to make a package that is more widely applicable. This, in turn, will more likely result in a broader adoption and in more resources of more companies in the medium turn.</p>
+<p>The earlier you start to open source, the less likely other companies have already solved the problem in house. This again increases the likelihood that they may join your project, as there is still room for other companies to have a seat at the table.</p>
+<p>I think it is also a very good idea to keep the development team close to the end users. This will ensure that the end product is actually usable at the end. We ensure this by having developers on our team that also work as statistical programmers, plus we try to frequently engage with a broad group of statistical programmers. An example for that was the admiral hackathon last january, where we introduced the admiral workflow to hundreds of statistical programmers.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -523,35 +547,37 @@ Stefan Thoma
           display:block!important;
       }</style></aside>
 </section>
-<section id="design" class="slide level2">
+<section id="design" class="slide level2 scrollable">
 <h2>Design</h2>
+<div>
 <ul>
-<li><p>One <code>core</code> package</p>
+<li class="fragment"><p>One <code>core</code> package</p>
 <ul>
-<li><ul>
-<li>package for therapeutic area</li>
+<li class="fragment">Plus package for therapeutic area</li>
+<li class="fragment">Plus internal company package</li>
 </ul></li>
-<li><ul>
-<li>internal company package</li>
-</ul></li>
-</ul></li>
-<li><p>Consistent interface and design across all packages</p>
+<li class="fragment"><p>Consistent interface and design across all packages</p>
 <ul>
-<li>Ensured via developers guide and CICD</li>
-<li>Overlap of developers between packages</li>
+<li class="fragment">Ensured via developers guide and CICD</li>
+<li class="fragment">Overlap of developers between packages</li>
 </ul></li>
-<li><p>Modularity + templates for common / most more complex tasks</p></li>
-<li><p>License is jointly owned</p>
+<li class="fragment"><p>Modularity + templates for common / most more complex tasks</p></li>
+<li class="fragment"><p>License is jointly owned</p>
 <ul>
-<li>Admiral won’t stop if one company exits</li>
-<li>Monetisation of code not possible</li>
-<li>Responsibility for maintanance
+<li class="fragment">Admiral won’t stop if one company exits</li>
+<li class="fragment">Monetisation of code not possible</li>
+<li class="fragment">Responsibility for maintanance
 <ul>
-<li>Package is never “done”</li>
+<li class="fragment">Package is never “done”</li>
 </ul></li>
 </ul></li>
 </ul>
+</div>
 <aside class="notes">
+<p>Now lets outline some of the thoughts that went into the package:</p>
+<p>So first, the admiral package does not stand on its own. It is a core package which includes the most general functionalities. But there are currently x other therapeutic specific packages, namely admiralonco, admiralvaccines, and more. There, another dev team works on therapeutic specific implementations.</p>
+<p>There are also company specific extensions, for example, at roche we have admiralroche which includes company specific functions. This can for example override specific default settings of the more general admiral package or implement common challenges in proprietary data-sets that are not generally an issue.</p>
+<p>However, we try to keep all these packages consistent with each other. That means that all packages follow a certain design philosophy and nomenclature. We try to “enforce” this by having a public developers guide which lays bare the thoughts that went into the design, and how developers can best follow the practice. Commonalities are further ensured by having core package developers involved in the addon packages as well.</p>
 <p>Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -565,12 +591,25 @@ Stefan Thoma
           display:block!important;
       }</style></aside>
 </section></section>
+<section id="development-workflow" class="title-slide slide level1 center">
+<h1>Development workflow</h1>
+<ul>
+<li>GitHub repository is the centerpiece</li>
+<li>Every request / fix / improvement starts as an issue</li>
+<li>Weekly stand-up meetings</li>
+<li>Check-in on progress</li>
+<li>Discuss priorities for current release - Product lead (Roche) &amp; technical lead (GSK)</li>
+<li>Assign issues from the backlog</li>
+<li>Strategy discussions</li>
+</ul>
+</section>
+
 <section id="conclusion" class="title-slide slide level1 center">
 <h1>Conclusion</h1>
 <p>Message: Benefits of developing open source packages across companies</p>
 <p>Particularly attractive for new hires</p>
 <aside class="notes">
-<p>This slide is not finished yet</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
