@@ -273,6 +273,7 @@ Speaker notes go here.
 -  Use of R attracts *diverse* talent
 -  same language for stats and statistical programmers
 -  Open source development means transparency 
+
   -   Work done on `admiral` -- recognition
   -   Issues, errors and corrections
 -  Knowledge is more easily transferable to other companies
