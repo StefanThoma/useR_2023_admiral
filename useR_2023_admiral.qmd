@@ -28,11 +28,16 @@ Let me explain:
 
 # Context
 
+::: {.incremental}
+
+
 -   Shift from SAS to R
   -   End-to-end solution is required
   -   [Pharmaverse](https://pharmaverse.org/)
   
 -   Cross-industry development
+
+:::
 
 
 
@@ -84,6 +89,8 @@ Today, I would like to talk about why we open source, how we do it, and why it m
 :::
 
 :::{.column width="60%"}
+::: {.incremental}
+
 
 ```{r}
 library(admiral)
@@ -92,6 +99,8 @@ library(admiral)
 -   End-to-end solution under Pharmaverse
   -   `admiral` covers the creation of ADaM data
 -   Not a Roche product
+
+:::
 
 :::
 
@@ -111,6 +120,8 @@ How did that happen?
 
 ## Challenges at startup
 
+::: {.incremental}
+
 -  Convince the company
     - Real problem needs to be solved, whats in it for the company? 
     - Already have some work done, e.g. partners or something solid
@@ -119,7 +130,7 @@ How did that happen?
 
 -  Convince other companies
 
-
+:::
 
 ::: {.notes}
 
@@ -157,7 +168,7 @@ one team from the start
 
 # Strategies
 
-## Approach
+## Approach [1]
 ::: {.incremental}
 
 -   Act quickly: 
@@ -170,6 +181,7 @@ one team from the start
     - Users help development
     - Can give feedback, create issues
     - Can join devs 
+
 :::
 
 ::: {.notes}
@@ -190,9 +202,27 @@ This will ensure that the end product is actually usable at the end.
 We ensure this by having developers on our team that also work as statistical programmers, plus we try to frequently engage with a broad group of statistical programmers. 
 An example for that was the admiral hackathon last january, where we introduced the admiral workflow to hundreds of statistical programmers. 
 
+
 :::
 
-## Design { .scrollable}
+
+## Approach [2]
+::: {.incremental}
+    
+-  License is jointly owned
+    - Admiral won't stop if one company exits
+    - Monetisation of code not possible
+    - Responsibility for maintenance
+        - Package is never "done"
+:::
+
+::: {.notes}
+
+Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.
+
+:::
+
+## Design  { .scrollable}
 ::: {.incremental}
 -  One `core` package 
     -  Plus package for therapeutic area, e.g.
@@ -205,11 +235,7 @@ An example for that was the admiral hackathon last january, where we introduced 
 
 -  Modularity + templates for common / most more complex tasks
 
--  License is jointly owned
-    - Admiral won't stop if one company exits
-    - Monetisation of code not possible
-    - Responsibility for maintenance
-        - Package is never "done"
+
 :::
 
 ::: {.notes}
@@ -231,22 +257,23 @@ Commonalities are further ensured by having core package developers involved in 
 
 
 
-Joint license means stability. Stability is needed if we want the industry to trust this and adopt / adapt this solution.
 
 :::
 
 
 
-# Development workflow
+
+
+# Dev. workflow
 
 -   GitHub repository is the centerpiece
 -   Every request / fix / improvement starts as an issue
 -   Weekly stand-up meetings
-  -   Check-in on progress
-  -   Discuss priorities for current release
-    -   Product lead (Roche) & technical lead (GSK)
-  -   Assign issues from the backlog
-  -   Strategy discussions
+    -   Check-in on progress
+    -   Discuss priorities for current release
+        -   Product lead (Roche) & technical lead (GSK)
+    -   Assign issues from the backlog
+    -   Strategy discussions
 -   Quarterly releases
 
 # Impact 
@@ -266,7 +293,7 @@ Speaker notes go here.
 :::
 
 
-## Workplace 
+## Workplace  [1]
 
 ::: {.incremental}
 
@@ -275,6 +302,17 @@ Speaker notes go here.
 -  Open source development means transparency 
   -   Work done on `admiral` -- recognition
   -   Issues, errors and corrections
+
+:::
+
+::: {.notes}
+Surprised to learn that Roche is *investing* ito open source projects 
+
+:::
+## Workplace [2]
+
+::: {.incremental}
+
 -  Knowledge is more easily transferable to other companies
 -  Less hierarchies in dev team (different companies)
   -  Harder to get recognition, no manager present
@@ -286,7 +324,6 @@ Speaker notes go here.
 
 
 ::: {.notes}
-Surprised to learn that Roche is *investing* ito open source projects 
 
 changes DS position from simply creating scripts one tiem to creating reusable software. 
 Changes the ADS position to a more effective and more rewarding work, because there will be less repetition and more focus on writing better and reusable code.
