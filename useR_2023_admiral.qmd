@@ -20,6 +20,9 @@ More specifically, I would like to discuss this from my personal perspective as 
 So let me introduce myself quickly: 
 I have a background in Psychology and Statistics, and joined Roche as an intern last September. 
 This April I joined Roche permanently as an Analytical Data Scientist, AKA a statistical programmer.  
+I spend about 20% of my time working on admiral, which is a big reason on why I was interested in this position. 
+
+Let me explain:
 
 :::
 
@@ -27,13 +30,32 @@ This April I joined Roche permanently as an Analytical Data Scientist, AKA a sta
 
 -   Shift from SAS to R
   -   End-to-end solution is required
+  -   [Pharmaverse](https://pharmaverse.org/)
   
--   Cross-company development
+-   Cross-industry development
 
 
 
 ::: {.notes}
+
+So at the moment there is a shift from SAS to R for statistical programming work going on at Roche, but also in the phamaceutical industry at large. 
+
+We aim to have an end-to-end clinical data analysis pipeline in R - this requires new tools to be developed.
+
+In SAS, tools used were developed externally, using R we decided to develop the tools ourselves. 
+But not only do we develop ourselves, but we also open source many of the projects and work on them with developers from other companies who are in a very similar situation.
+
+Together, we created the pharmaverse, an opinionated collection of R packages designed for clinical data analysis.
+
+
+
+Today, I would like to talk about why we open source, how we do it, and why it matters for me personally using `admiral` to exemplify.
+
+
+
 <!-- We didn't like in SAS:  -->
+
+
 <!-- - Each company buys their own custom solutions form vendors -->
 <!-- - Even if a new hire is SAS proficient they need to learn company specific workflow and  -->
 <!-- - Very specific solutions for specific problems, not modular -->
@@ -48,17 +70,7 @@ This April I joined Roche permanently as an Analytical Data Scientist, AKA a sta
 
 
 
-First, we are switching to an overarching language agnostic computing environment
-And we are developing at the moment within the open source programming language R.
-We aim to have an end-to-end clinical data analysis pipeline in R
-
-And second, the decision to collaborate with other companies to develop the solutions
-
 :::
-
-```{r}
-getwd()
-```
 
 
 # Project
@@ -72,10 +84,13 @@ getwd()
 :::
 
 :::{.column width="60%"}
+
+```{r}
+library(admiral)
+```
+
 -   End-to-end solution under Pharmaverse
--   Admiral covers the transformation from SDTM to ADaM
-
-
+  -   `admiral` covers the creation of ADaM data
 -   Not a Roche product
 
 :::
@@ -85,9 +100,12 @@ getwd()
 
 
 ::: {.notes}
-talk two sentences what admiral does, and that its modular, etc. 
+`admiral` is a package designed to create adam data, a standardised data format for data analysis and submission to the regulatory authorities.
 
-Emphasize that we do not see admiral as a 
+From the very start, this package has been jointly developed by Roche and GSK
+
+How did that happen?
+
 :::
 
 
@@ -96,7 +114,6 @@ Emphasize that we do not see admiral as a
 -  Convince the company
     - Real problem needs to be solved, whats in it for the company? 
     - Already have some work done, e.g. partners or something solid
-    - Ask for forgiveness, not for permission
 
 -  Convince regulators
 
@@ -106,7 +123,7 @@ Emphasize that we do not see admiral as a
 
 ::: {.notes}
 
-One of the first products that was open source from the beginning. 
+One of the first packages we developed that was open source from the beginning. 
 
 A lot of convincing was needed! 
 To get a project properly started there needs to be approval from the higher ups. 
@@ -114,7 +131,7 @@ I have talked to several people involved and can reiterate what they told me:
 Most importantly, you have to able to explain whats in it for the company.
 
 I believe this is a clear case: Roche is not a software development company, we develop drugs. 
-We do not gain any competitive advantage by protecting our trial analysis software. 
+We do not gain any competitive advantage by protecting our data analysis software. 
 Up to now, we paid a lot of money to buy SAS licenses and to have software developed for us. 
 We want to work in R, why not share the developers cost?
 
@@ -132,54 +149,14 @@ So what needed to be done: convince your peers!
 Tell story from Thomas Neitmann Roche & Marco Rimmler GSK
 one team from the start
 
+6 months in house
 
-changes DS position from simply creating scripts one tiem to creating reusable software. 
-Changes the ADS position to a more effective and more rewarding work, because there will be less repetition and more focus on writing better and reusable code.
+
 
 :::
-
-# Impact 
-
-## For Roche
-
-::: {.incremental}
-
--  10 Devs for the price of 2
--  Seat at the table - shape the product
--  No total development control
-
-:::
-
-::: {.notes}
-Speaker notes go here.
-:::
-
-
-## Workplace 
-::: {.incremental}
--  Use of R attracts talent
--  same language for stats and statistical programmers
--  Open source development means transparency and more ethical 
--  Less hierarchies in dev team (different companies)
--  Autonomous work - everyone can chose which issues they want to work
--  Expanding network across companies
--  Knowledge is more easily transferable to other positions
--  Leadership  opportunities outside of corporation
--  Harder to get recognition, no manager present
-:::
-
-
-::: {.notes}
-Surprised to learn that Roche is *investing* ito open source projects 
-
-
-
-Recognition: That's why I have to make such a presentation... (joke)
-:::
-
-
 
 # Strategies
+
 ## Approach
 ::: {.incremental}
 
@@ -194,7 +171,10 @@ Recognition: That's why I have to make such a presentation... (joke)
     - Can give feedback, create issues
     - Can join devs 
 :::
+
 ::: {.notes}
+
+How can you develop effectively? 
 
 The first thing is: Get the message out. 
 You are already working on something? Or know that you will soon? 
@@ -215,7 +195,8 @@ An example for that was the admiral hackathon last january, where we introduced 
 ## Design { .scrollable}
 ::: {.incremental}
 -  One `core` package 
-    -  Plus package for therapeutic area 
+    -  Plus package for therapeutic area, e.g.
+      -   `admiralonco`, `admiralvaccine`, etc.
     -  Plus internal company package
     
 -  Consistent interface and design across all packages
@@ -227,9 +208,10 @@ An example for that was the admiral hackathon last january, where we introduced 
 -  License is jointly owned
     - Admiral won't stop if one company exits
     - Monetisation of code not possible
-    - Responsibility for maintanance
+    - Responsibility for maintenance
         - Package is never "done"
 :::
+
 ::: {.notes}
 Now lets outline some of the thoughts that went into the package: 
 
@@ -265,15 +247,84 @@ Joint license means stability. Stability is needed if we want the industry to tr
     -   Product lead (Roche) & technical lead (GSK)
   -   Assign issues from the backlog
   -   Strategy discussions
+-   Quarterly releases
+
+# Impact 
+
+## For Roche
+
+::: {.incremental}
+
+-  10 Devs for the price of 3
+-  Seat at the table - shape the product
+-  No total development control
+
+:::
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+
+## Workplace 
+
+::: {.incremental}
+
+-  Use of R attracts *diverse* talent
+-  same language for stats and statistical programmers
+-  Open source development means transparency 
+  -   Work done on `admiral` -- recognition
+  -   Issues, errors and corrections
+-  Knowledge is more easily transferable to other companies
+-  Less hierarchies in dev team (different companies)
+  -  Harder to get recognition, no manager present
+  -  Autonomous work - everyone can chose which issues they want to work
+-  Expanding network across companies
+-  Leadership  opportunities outside of corporation
+
+:::
+
+
+::: {.notes}
+Surprised to learn that Roche is *investing* ito open source projects 
+
+changes DS position from simply creating scripts one tiem to creating reusable software. 
+Changes the ADS position to a more effective and more rewarding work, because there will be less repetition and more focus on writing better and reusable code.
+
+
+Recognition: That's why I have to make such a presentation... (joke)
+:::
+
 
 
 # Conclusion
 
-Message: Benefits of developing open source packages across companies
+::: {.incremental}
 
-Particularly attractive for new hires
+-   Open source and cross industry collaboration when done well:
+  -   is more efficient
+  -   opens horizons
+  -   expands the job description of statistical programmers
+  -   makes for an attractive workspace (at least for me...)
+
+-   To do it well, you have to:
+  -   be quick to communicate
+  -   convince others to join -- or join yourself
+  -   be transparent
+  -   ensure stability through responsible maintenance
+
+:::
 
 ::: {.notes}
+
+
+To do it well you have to be quick, you don't want 5 other companies doing the work you do at the same time, because all companies are already invested and convinced of their own solution. 
+Get broad support for your project, be it from the inside or the outside.
+If you know of other projects that try to solve the same problem, be openminded about its qualities. Maybe You should join Them?
+If you want others to join yours, you need to be transparent about where you are, where you want to be, and how you want to get there. 
+In the end, you need to establish trust. 
+Trust also requires stability, and stability means continuous improvement and adaption. 
+A good R package should not go stale, so proper maintaining should be planned. 
 
 :::
 
@@ -282,7 +333,9 @@ Particularly attractive for new hires
 
 Doing now what patients need next
 
-# (ignore this slide) meeting notes
+
+
+# (ignore this slide) meeting notes {.hidden}
 
 ::: {.notes}
 
