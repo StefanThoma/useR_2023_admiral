@@ -361,7 +361,7 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
 <h1>Context</h1>
 <div>
 <ul>
-<li class="fragment"><p>Shift from SAS to R</p></li>
+<li class="fragment"><p>Shift to open source solutions, particularly R</p></li>
 <li class="fragment"><p>End-to-end solution is required</p></li>
 <li class="fragment"><p><a href="https://pharmaverse.org/">Pharmaverse</a></p></li>
 <li class="fragment"><p>Cross-industry development</p></li>
@@ -416,7 +416,7 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
 </div>
 </div>
 <aside class="notes">
-<p><code>admiral</code> is a package designed to create adam data, a standardised data format for data analysis and submission to the regulatory authorities.</p>
+<p><code>admiral</code> is a package designed to create ADaM data, a CDISC standart data format for data analysis and submission to the regulatory authorities.</p>
 <p>From the very start, this package has been jointly developed by Roche and GSK</p>
 <p>How did that happen?</p>
 <style type="text/css">
@@ -435,20 +435,20 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
 <h2>Challenges at startup</h2>
 <div>
 <ul>
-<li class="fragment"><p>Convince the company</p>
+<li class="fragment">Convince your company
 <ul>
 <li class="fragment">Real problem needs to be solved, whats in it for the company?</li>
-<li class="fragment">Already have some work done, e.g.&nbsp;partners or something solid</li>
+<li class="fragment">Already have some work done, e.g.&nbsp;partners or prototype</li>
 </ul></li>
-<li class="fragment"><p>Convince regulators</p></li>
-<li class="fragment"><p>Convince other companies</p></li>
+<li class="fragment">Convince other companies</li>
 </ul>
 </div>
 <aside class="notes">
 <p>One of the first packages we developed that was open source from the beginning.</p>
 <p>A lot of convincing was needed! To get a project properly started there needs to be approval from the higher ups. I have talked to several people involved and can reiterate what they told me: Most importantly, you have to able to explain whats in it for the company.</p>
-<p>I believe this is a clear case: Roche is not a software development company, we develop drugs. We do not gain any competitive advantage by protecting our data analysis software. Up to now, we paid a lot of money to buy SAS licenses and to have software developed for us. We want to work in R, why not share the developers cost?</p>
-<p>And that is not the only advantage: You will want to use that code for submissions too, otherwise why write it. It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry.</p>
+<p>I believe this is a clear case: Roche is not a software development company, we develop drugs. We do not gain any competitive advantage by protecting our data analysis software. We want to work in R, why not share the developers cost?</p>
+<p>And that is not the only advantage: You will want to use that code for submissions too, otherwise why write it.</p>
+<p>DONT SAY THAT!! It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry.</p>
 <p>So what needed to be done: convince your peers!</p>
 <p>Tell story from Thomas Neitmann Roche &amp; Marco Rimmler GSK one team from the start</p>
 <p>6 months in house</p>
@@ -537,16 +537,17 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
 <ul>
 <li class="fragment">One <code>core</code> package
 <ul>
-<li class="fragment">Plus package for therapeutic area, e.g.</li>
-<li class="fragment"><code>admiralonco</code>, <code>admiralvaccine</code>, etc.</li>
+<li class="fragment">Plus package for therapeutic area.</li>
+<li class="fragment"><code>admiralonco</code>, <code>admiralvaccine</code>, <code>admiralophta</code></li>
 <li class="fragment">Plus internal company package</li>
+<li class="fragment">Plus working groups</li>
 </ul></li>
 <li class="fragment">Consistent interface and design across all packages
 <ul>
 <li class="fragment">Ensured via developers guide and CICD</li>
 <li class="fragment">Overlap of developers between packages</li>
 </ul></li>
-<li class="fragment">Modularity + templates for common / most more complex tasks</li>
+<li class="fragment">Modularity + templates for most more complex tasks</li>
 </ul>
 </div>
 <aside class="notes">
@@ -565,25 +566,36 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
-<section id="dev.-workflow" class="title-slide slide level1 center">
-<h1>Dev. workflow</h1>
-<ul>
-<li>GitHub repository is the centerpiece</li>
-<li>Every request / fix / improvement starts as an issue</li>
-<li>Weekly stand-up meetings
-<ul>
-<li>Check-in on progress</li>
-<li>Discuss priorities for current release
-<ul>
-<li>Product lead (Roche) &amp; technical lead (GSK)</li>
-</ul></li>
-<li>Assign issues from the backlog</li>
-<li>Strategy discussions</li>
-</ul></li>
-<li>Quarterly releases</li>
-</ul>
 </section>
+<section id="design-1" class="slide level2 scrollable">
+<h2>Design</h2>
+<iframe height="500" width="100%" src="https://pharmaverse.github.io/blog/">
+</iframe>
+</section>
+<section id="development-workflow-1" class="slide level2">
+<h2>Development workflow [1]</h2>
+<div>
+<ul>
+<li class="fragment">GitHub repository is the centerpiece</li>
+<li class="fragment">Every request / fix / improvement starts as an issue</li>
+<li class="fragment">Weekly stand-up meetings
+<ul>
+<li class="fragment">Check-in on progress</li>
+<li class="fragment">Discuss priorities for current release
+<ul>
+<li class="fragment">Product lead (Roche) &amp; technical lead (GSK)</li>
+</ul></li>
+<li class="fragment">Assign issues from the backlog</li>
+<li class="fragment">Strategy discussions</li>
+</ul></li>
+<li class="fragment">Quarterly releases</li>
+</ul>
+</div>
+</section></section>
+<section id="development-workflow-2" class="title-slide slide level1 center">
+<h1>Development workflow [2]</h1>
+
+<img data-src="project_board.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Project board</p></section>
 
 <section>
 <section id="impact" class="title-slide slide level1 center">
@@ -617,11 +629,11 @@ I spend about 20% of my time working on admiral, which is a big reason on why I 
 <h2>Workplace [1]</h2>
 <div>
 <ul>
-<li class="fragment">Use of R attracts <em>diverse</em> talent</li>
-<li class="fragment">same language for stats and statistical programmers</li>
-<li class="fragment">Open source development means transparency</li>
-<li class="fragment">Work done on <code>admiral</code> – recognition</li>
-<li class="fragment">Issues, errors and corrections</li>
+<li class="fragment"><p>Use of R attracts <em>diverse</em> talent</p></li>
+<li class="fragment"><p>same language for stats and statistical programmers</p></li>
+<li class="fragment"><p>Open source development means transparency</p></li>
+<li class="fragment"><p>Work done on <code>admiral</code> – recognition</p></li>
+<li class="fragment"><p>Issues, errors and corrections</p></li>
 </ul>
 </div>
 <aside class="notes">

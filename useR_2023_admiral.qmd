@@ -31,7 +31,7 @@ Let me explain:
 ::: {.incremental}
 
 
--   Shift from SAS to R
+-   Shift to open source solutions, particularly R
   -   End-to-end solution is required
   -   [Pharmaverse](https://pharmaverse.org/)
   
@@ -93,6 +93,7 @@ Today, I would like to talk about why we open source, how we do it, and why it m
 
 
 ```{r}
+#| eval: false 
 library(admiral)
 ```
 
@@ -109,7 +110,7 @@ library(admiral)
 
 
 ::: {.notes}
-`admiral` is a package designed to create adam data, a standardised data format for data analysis and submission to the regulatory authorities.
+`admiral` is a package designed to create ADaM data, a CDISC standart data format for data analysis and submission to the regulatory authorities.
 
 From the very start, this package has been jointly developed by Roche and GSK
 
@@ -122,11 +123,9 @@ How did that happen?
 
 ::: {.incremental}
 
--  Convince the company
+-  Convince your company
     - Real problem needs to be solved, whats in it for the company? 
-    - Already have some work done, e.g. partners or something solid
-
--  Convince regulators
+    - Already have some work done, e.g. partners or prototype
 
 -  Convince other companies
 
@@ -143,12 +142,13 @@ Most importantly, you have to able to explain whats in it for the company.
 
 I believe this is a clear case: Roche is not a software development company, we develop drugs. 
 We do not gain any competitive advantage by protecting our data analysis software. 
-Up to now, we paid a lot of money to buy SAS licenses and to have software developed for us. 
 We want to work in R, why not share the developers cost?
 
 And that is not the only advantage: 
 You will want to use that code for submissions too, otherwise why write it. 
-It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry. 
+
+
+DONT SAY THAT!! It is much easier to convince the FDA to accept your package or your workflow in R if the workflow is used across the industry. 
 
 So what needed to be done: convince your peers! 
 
@@ -225,15 +225,17 @@ Joint license means stability. Stability is needed if we want the industry to tr
 ## Design  { .scrollable}
 ::: {.incremental}
 -  One `core` package 
-    -  Plus package for therapeutic area, e.g.
-      -   `admiralonco`, `admiralvaccine`, etc.
+    -  Plus package for therapeutic area.
+      -   `admiralonco`, `admiralvaccine`, `admiralophta`
     -  Plus internal company package
-    
+    -   Plus working groups
 -  Consistent interface and design across all packages
     - Ensured via developers guide and CICD
     - Overlap of developers between packages
 
--  Modularity + templates for common / most more complex tasks
+-  Modularity + templates for most more complex tasks
+
+
 
 
 :::
@@ -260,11 +262,13 @@ Commonalities are further ensured by having core package developers involved in 
 
 :::
 
+## Design  { .scrollable}
+
+<iframe height="500" width="100%" src="https://pharmaverse.github.io/blog/"></iframe>
 
 
-
-
-# Dev. workflow
+## Development workflow [1]
+::: {.incremental}
 
 -   GitHub repository is the centerpiece
 -   Every request / fix / improvement starts as an issue
@@ -275,6 +279,14 @@ Commonalities are further ensured by having core package developers involved in 
     -   Assign issues from the backlog
     -   Strategy discussions
 -   Quarterly releases
+
+:::
+
+# Development workflow [2]
+![Project board](project_board.png){width=100%}
+
+
+
 
 # Impact 
 
