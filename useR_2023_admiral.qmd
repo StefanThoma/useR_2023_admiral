@@ -1,7 +1,7 @@
 ---
 title: "Cross Industry Package Development"
 subtitle: "A Newcomer's Perspective"
-date: 21/07/2022
+date: "21 July 2023"
 author: Stefan Thoma
 title-slide-attributes: 
   data-background-color: "#F5F5F2"
